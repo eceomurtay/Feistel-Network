@@ -56,8 +56,8 @@ public class Cipher {
 		}
 		for(int j = 0; j < boxes.length; j++){
 			String bx = boxes[j];
-			String inner = bx.substring(1, 5); 								// column
-			String outer = bx.substring(0,1) + bx.charAt(bx.length()-1); 	// row
+			String inner = bx.substring(1, 5); 						// column
+			String outer = bx.substring(0,1) + bx.charAt(bx.length()-1); 			// row
 			int colidx = Integer.parseInt(inner, 2);
 			int rowidx = Integer.parseInt(outer, 2);
 			outputBoxes[j] = table[rowidx][colidx];
@@ -79,13 +79,13 @@ public class Cipher {
 	
 	public String swap(String str){	
 		
-        char[] arr = str.toCharArray();
-        for(int c = 0; c < str.length() - 1; c += 2){
-          char temp = arr[c];
-          arr[c] = arr[c+1];
-          arr[c+1] = temp;
-        }
-        return String.valueOf(arr);
+		char[] arr = str.toCharArray();
+		for(int c = 0; c < str.length() - 1; c += 2){
+		  char temp = arr[c];
+		  arr[c] = arr[c+1];
+		  arr[c+1] = temp;
+		}
+		return String.valueOf(arr);
 	}
 	
 }
